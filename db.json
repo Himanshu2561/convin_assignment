@@ -1,38 +1,9 @@
 {
-  "cards": [
-    {
-      "id": 2,
-      "name": "Card 2",
-      "link": "https://example.com",
-      "bucketId": 1
-    },
-    {
-      "name": "card 3",
-      "link": "https://example.com",
-      "bucketId": 2,
-      "id": 3
-    },
-    {
-      "name": "card 4",
-      "link": "https://example.com",
-      "bucketId": 2,
-      "id": 4
-    },
-    {
-      "name": "card 6",
-      "link": "https://example.com",
-      "bucketId": 1,
-      "id": 6
-    }
-  ],
+  "cards": [],
   "buckets": [
     {
       "id": 1,
       "name": "Entertainment Videos"
-    },
-    {
-      "id": 2,
-      "name": "Education Videos"
     }
   ]
 }

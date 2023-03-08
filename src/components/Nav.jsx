@@ -28,7 +28,7 @@ const Nav = () => {
             </p>
           ) : (
             <p
-              className='cursor-pointer text-lg text-black font-semibold hover:text-black'
+              className='cursor-pointer text-lg text-white font-semibold hover:text-black'
               onClick={() => {
                 navigate('/')
               }}

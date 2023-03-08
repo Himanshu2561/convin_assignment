@@ -3,10 +3,9 @@ import { BsFillTrash2Fill } from 'react-icons/bs'
 import { AiFillEdit } from 'react-icons/ai'
 import Select from 'react-select'
 import axios from 'axios'
-import EditCard from './EditCard'
+import EditCard from '../components/EditCard'
 
-const Card = (props) => {
-  const { card, buckets } = props
+const Card = ({ card, buckets, setVideoLink, setShowModal }) => {
   const [selectedOption, setSelectedOption] = useState(null)
   const [editToggle, setEditToggle] = useState(false)
 
@@ -30,6 +29,18 @@ const Card = (props) => {
     location.reload()
   }
 
+  const handlePlay = () => {
+    const playedCards = JSON.parse(localStorage.getItem('playedCards')) || []
+    playedCards.push({
+      name: card.name,
+      link: card.link,
+      timePlayed: new Date().toLocaleString(),
+    })
+    localStorage.setItem('playedCards', JSON.stringify(playedCards))
+    setVideoLink(card.link)
+    setShowModal(true)
+  }
+
   const options = [
     ...buckets.map((bucket) => ({ value: bucket.id, label: bucket.name })),
   ]
@@ -49,9 +60,9 @@ const Card = (props) => {
         />
       ) : (
         <div className='text-center h-[18rem] w-[18rem] p-4 text-sm rounded-md flex justify-evenly flex-col gap-6 bg-white text-blue-600'>
-          <p>{card.name}</p>
-          <p>
-            <a href='http://'>{card.link}</a>
+          <p className='break-words'>{card.name}</p>
+          <p className='cursor-pointer break-words' onClick={handlePlay}>
+            {card.link}
           </p>
           <div className='flex justify-around gap-2 text-xl items-center text-black'>
             <div

@@ -2,11 +2,11 @@ import React from 'react'
 import { Routes, Route} from 'react-router-dom'
 import './App.css'
 import Nav from './components/Nav'
-import Home from './components/Home'
-import HistoryTab from './components/HistoryTab'
-import CreateBucket from './components/CreateBucket'
-import CreateCard from './components/CreateCard'
-import PageNotFound from './components/PageNotFound'
+import Home from './pages/Home'
+import HistoryTab from './pages/HistoryTab'
+import CreateBucket from './pages/CreateBucket'
+import CreateCard from './pages/CreateCard'
+import PageNotFound from './pages/PageNotFound'
 
 function App() {
 

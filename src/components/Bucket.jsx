@@ -88,7 +88,14 @@ const Bucket = (props) => {
               })
               return (
                 <div key={card.id} className='my-5'>
-                  <Card card={card} buckets={filterdBuckets} />
+                  <Card
+                    card={card}
+                    buckets={filterdBuckets}
+                    videoLink={videoLink}
+                    setVideoLink={setVideoLink}
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                  />
                 </div>
               )
             })}

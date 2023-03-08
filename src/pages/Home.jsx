@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Bucket from './Bucket'
+import Bucket from '../components/Bucket'
 import axios from 'axios'
 
 const Home = () => {
