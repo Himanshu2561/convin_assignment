@@ -10,7 +10,7 @@ const Card = ({ card, buckets, setVideoLink, setShowModal }) => {
   const [editToggle, setEditToggle] = useState(false)
 
   const deleteCard = async (id) => {
-    const CARD_URL = `http://localhost:3000/cards/${id}`
+    const CARD_URL = `https://convin-assign-himanshu.onrender.com/cards/${id}`
     await axios.delete(CARD_URL).catch((err) => {
       console.log(err)
     })
@@ -19,7 +19,7 @@ const Card = ({ card, buckets, setVideoLink, setShowModal }) => {
 
   const moveCard = async () => {
     try {
-      const CARD_URL = `http://localhost:3000/cards/${card.id}`
+      const CARD_URL = `https://convin-assign-himanshu.onrender.com/cards/${card.id}`
       await axios.patch(CARD_URL, {
         bucketId: selectedOption.value,
       })
@@ -57,6 +57,7 @@ const Card = ({ card, buckets, setVideoLink, setShowModal }) => {
           id={card.id}
           editToggle={editToggle}
           setEditToggle={setEditToggle}
+          card={card}
         />
       ) : (
         <div className='text-center h-[18rem] w-[18rem] p-4 text-sm rounded-md flex justify-evenly flex-col gap-6 bg-white text-blue-600'>

@@ -16,7 +16,7 @@ const Bucket = (props) => {
   const deleteCards = () => {
     selectedOption.map(async (item) => {
       try {
-        const CARD_URL = `http://localhost:3000/cards/${item.value}`
+        const CARD_URL = `https://convin-assign-himanshu.onrender.com/cards/${item.value}`
         await axios.delete(CARD_URL)
       } catch (error) {
         console.log(error.message)
@@ -27,7 +27,7 @@ const Bucket = (props) => {
 
   const deleteBucket = async () => {
     try {
-      const CARD_URL = `http://localhost:3000/buckets/${bucket.id}`
+      const CARD_URL = `https://convin-assign-himanshu.onrender.com/buckets/${bucket.id}`
       await axios.delete(CARD_URL)
     } catch (error) {
       console.log(error.message)
@@ -38,7 +38,7 @@ const Bucket = (props) => {
   const renameBucket = async (e) => {
     e.preventDefault()
     try {
-      const BUCKET_URL = `http://localhost:3000/buckets/${bucket.id}`
+      const BUCKET_URL = `https://convin-assign-himanshu.onrender.com/buckets/${bucket.id}`
       await axios.patch(BUCKET_URL, {
         name: rename,
       })

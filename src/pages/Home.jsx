@@ -6,8 +6,8 @@ const Home = () => {
   const [buckets, setBuckets] = useState([])
   const [cards, setCards] = useState([])
 
-  const BUCKET_URL = 'http://localhost:3000/buckets'
-  const CARD_URL = 'http://localhost:3000/cards'
+  const BUCKET_URL = 'https://convin-assign-himanshu.onrender.com/buckets'
+  const CARD_URL = 'https://convin-assign-himanshu.onrender.com/cards'
 
   useEffect(() => {
     axios

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const CreateBucket = () => {
-  const CARD_URL = `http://localhost:3000/buckets`
+  const CARD_URL = `https://convin-assign-himanshu.onrender.com/buckets`
   const [bucketName, setBucketName] = useState('')
   const navigate = useNavigate()
 

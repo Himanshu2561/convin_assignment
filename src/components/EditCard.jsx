@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 const EditCard = (props) => {
-  const { id, editToggle, setEditToggle } = props
-  const [cardName, setCardName] = useState('')
-  const [cardLink, setCardLink] = useState('')
+  const { id, editToggle, setEditToggle, card } = props
+  const [cardName, setCardName] = useState(card.name)
+  const [cardLink, setCardLink] = useState(card.link)
 
   const updateCard = async (id) => {
     try {
-      const CARD_URL = `http://localhost:3000/cards/${id}`
+      const CARD_URL = `https://convin-assign-himanshu.onrender.com/cards/${id}`
       await axios.patch(CARD_URL, {
         name: cardName,
         link: cardLink,

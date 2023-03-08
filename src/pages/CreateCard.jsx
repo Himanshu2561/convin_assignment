@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const CreateCard = () => {
-  const CARD_URL = `http://localhost:3000/cards`
+  const CARD_URL = `https://convin-assign-himanshu.onrender.com/cards`
   const [cardName, setCardName] = useState('')
   const [cardLink, setCardLink] = useState('')
   const { state } = useLocation()
