@@ -13,6 +13,12 @@ const Bucket = (props) => {
   const [videoLink, setVideoLink] = useState('')
   const navigate = useNavigate()
 
+  if (showModal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+
   const deleteCards = () => {
     selectedOption.map(async (item) => {
       try {
